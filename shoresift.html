@@ -38,19 +38,12 @@
 <main>
 <!-- ================= Shoresift v1.0 ================= -->
 <div class="page" data-page="shoresift" data-title="洄藍計劃MarineLoop - Shoresift v1.0">
-  <div class="sx-sub"><b>Shoresift v1.0</b><nav><a data-go="sxStage">概覽</a><a data-go="sxFeats">特色</a><a data-go="sxPartsSec">零件</a><a data-go="sxSpecSec">規格</a><a class="sx-btn" href="contact.html">聯絡我們</a></nav></div>
 
   <section class="sx-scrolly" id="sxStage" aria-label="Shoresift v1.0 介紹">
     <div class="sx-pin" id="sxPin">
-      <div class="sx-bg" aria-hidden="true"></div>
-      <div class="sx-world" id="sxWorld" aria-hidden="true">
-        <img class="base" src="img/shoresift-machine.webp" alt="" draggable="false">
-        <div class="sx-shade" id="sxShade"></div>
-        <div class="sx-hi" id="sxHi"><img src="img/shoresift-machine.webp" alt="" draggable="false"></div>
-        <svg class="sx-lines" id="sxLines" viewBox="0 0 1600 923" preserveAspectRatio="none"></svg>
-        <div class="sx-box" id="sxBox"><i></i><i></i><i></i><i></i></div>
-        <div id="sxLabs"></div><div id="sxPins"></div>
-      </div>
+      <div class="sx-grid" aria-hidden="true"></div>
+      <svg id="sxSvg" aria-hidden="true" preserveAspectRatio="xMidYMid meet"></svg>
+      <div class="sx-ov" aria-hidden="true"><svg id="sxLines" width="100%" height="100%" style="position:absolute;inset:0;overflow:visible"></svg><div id="sxLabs"></div><div class="sx-box" id="sxBox"><i></i><i></i><i></i><i></i></div></div>
       <div class="sx-title" id="sxTitle">
         <p class="sx-kick">Shoresift 第一代</p>
         <h1 aria-label="Shoresift v1.0"><span>Shoresift</span> <span>v1.0</span></h1>
@@ -70,9 +63,9 @@
 
   <section class="sx-feats" id="sxFeats">
     <div class="sx-fg">
-      <article class="sx-f wide" data-r="[360,420,430,390]"><small>進沙機構</small><h3>雙螺旋進沙結構</h3><p>配合<b>裝置進沙口</b>，把沙子與廢棄物導入篩選模組。</p><div class="ph"></div></article>
-      <article class="sx-f" data-r="[960,480,410,380]"><small>行走機構</small><h3>履帶式驅動</h3><p><b>前輪 ×2</b>、<b>後驅動輪 ×2</b>、<b>履帶輪板架 ×2</b>、<b>履帶輪支撐柱 ×2</b>。</p><div class="ph"></div></article>
-      <article class="sx-f" data-r="[590,200,330,240]"><small>控制與供電</small><h3>樹莓派與供電</h3><p><b>樹莓派 4B 2G Ram</b>、樹莓派18650供電模組、18650 5V / 12V供電模組。</p><div class="ph"></div></article>
+      <article class="sx-f wide" data-layout='[{"i":12,"x":38,"y":58,"w":62,"d":0},{"i":11,"x":78,"y":44,"w":46,"d":-2}]'><small>進沙機構</small><h3>雙螺旋進沙結構</h3><p>配合<b>裝置進沙口</b>，把沙子與廢棄物導入篩選模組。</p><div class="ph"></div></article>
+      <article class="sx-f" data-layout='[{"i":9,"x":58,"y":78,"w":78,"d":-1},{"i":10,"x":30,"y":50,"w":30,"d":-3},{"i":8,"x":74,"y":36,"w":32,"d":0},{"i":7,"x":36,"y":24,"w":30,"d":-4}]'><small>行走機構</small><h3>履帶式驅動</h3><p><b>前輪 ×2</b>、<b>後驅動輪 ×2</b>、<b>履帶輪板架 ×2</b>、<b>履帶輪支撐柱 ×2</b>。</p><div class="ph"></div></article>
+      <article class="sx-f" data-layout='[{"i":4,"x":58,"y":34,"w":58,"d":0},{"i":5,"x":40,"y":68,"w":50,"d":-2},{"i":6,"x":78,"y":76,"w":42,"d":-4}]'><small>控制與供電</small><h3>樹莓派與供電</h3><p><b>樹莓派 4B 2G Ram</b>、樹莓派18650供電模組、18650 5V / 12V供電模組。</p><div class="ph"></div></article>
     </div>
   </section>
 
@@ -119,6 +112,8 @@
 
 <script src="js/images.js"></script>
 <script src="js/main.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/machine.js"></script>
 <script src="js/shoresift.js"></script>
 </body>
 </html>
