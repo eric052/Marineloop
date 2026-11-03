@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/shoresift.css">
 <script>try{if(sessionStorage.getItem("ml-nav")==="1")document.documentElement.classList.add("arriving")}catch(e){}</script>
 </head>
-<body>
+<body class="sx-page">
 <div id="progress"></div>
 <div id="glow" aria-hidden="true"></div>
 <div id="curtain" aria-hidden="true"><span class="logo"><img data-img="logo" alt=""></span></div>
@@ -38,61 +38,66 @@
 <main>
 <!-- ================= Shoresift v1.0 ================= -->
 <div class="page" data-page="shoresift" data-title="洄藍計劃MarineLoop - Shoresift v1.0">
-  <header class="sx-hero">
-    <div class="sx-hero-in">
-      <div>
+  <div class="sx-sub"><b>Shoresift v1.0</b><nav><a data-go="sxStage">概覽</a><a data-go="sxFeats">特色</a><a data-go="sxPartsSec">零件</a><a data-go="sxSpecSec">規格</a><a class="sx-btn" href="contact.html">聯絡我們</a></nav></div>
+
+  <section class="sx-scrolly" id="sxStage" aria-label="Shoresift v1.0 介紹">
+    <div class="sx-pin" id="sxPin">
+      <div class="sx-bg" aria-hidden="true"></div>
+      <div class="sx-world" id="sxWorld" aria-hidden="true">
+        <img class="base" src="img/shoresift-machine.webp" alt="" draggable="false">
+        <div class="sx-shade" id="sxShade"></div>
+        <div class="sx-hi" id="sxHi"><img src="img/shoresift-machine.webp" alt="" draggable="false"></div>
+        <svg class="sx-lines" id="sxLines" viewBox="0 0 1600 923" preserveAspectRatio="none"></svg>
+        <div class="sx-box" id="sxBox"><i></i><i></i><i></i><i></i></div>
+        <div id="sxLabs"></div><div id="sxPins"></div>
+      </div>
+      <div class="sx-title" id="sxTitle">
         <p class="sx-kick">Shoresift 第一代</p>
-        <h1 class="split" data-t="Shoresift v1.0">Shoresift v1.0</h1>
+        <h1 aria-label="Shoresift v1.0"><span>Shoresift</span> <span>v1.0</span></h1>
         <div class="sx-stats">
-          <div><b><span class="count" data-to="13" data-dec="0">0</span></b><span>組成項目</span></div>
-          <div><b><span class="count" data-to="3" data-dec="0">0</span></b><span>顆馬達</span></div>
-          <div><b><span class="count" data-to="4" data-dec="0">0</span></b><span>個輪子</span></div>
+          <div><b><span class="count" data-to="13" data-dec="0">0</span></b><span class="l">組成項目</span></div>
+          <div><b><span class="count" data-to="3" data-dec="0">0</span></b><span class="l">顆馬達</span></div>
+          <div><b><span class="count" data-to="4" data-dec="0">0</span></b><span class="l">個輪子</span></div>
         </div>
       </div>
-      <div class="sx-card" aria-hidden="true"><img src="img/shoresift-assembled.png" alt="裝置示意圖"></div>
-    </div>
-  </header>
-
-  <section class="sx-explore" id="sxExplore" aria-label="Shoresift v1.0 爆炸圖">
-    <div class="sx-head"><h2 class="reveal">爆炸圖</h2><p class="reveal">點選圖上的編號，或按「自動導覽」</p></div>
-    <div class="sx-grid">
-      <div class="sx-stage">
-        <div class="sx-sheet" id="sxSheet">
-          <div class="sx-bar" id="sxBar"><i></i></div>
-          <div class="sx-inner" id="sxInner">
-            <img src="img/shoresift-exploded.png" alt="Shoresift v1.0 爆炸圖：18650 5V / 12V供電模組、TT馬達、前輪、裝置進沙口、馬達架、L298N 馬達驅動版、樹莓派 4B、JAG 25-370 馬達、後驅動輪、履帶輪板架、履帶輪支撐柱、雙螺旋進沙結構" draggable="false">
-            <div class="sx-dim" id="sxDim"></div>
-            <div id="sxPins"></div>
-          </div>
-          <div class="sx-hud"><button id="sxPrev" type="button" aria-label="上一個">←</button><button id="sxNext" type="button" aria-label="下一個">→</button><button id="sxAll" type="button">總覽</button><span class="sp"></span><button id="sxPlay" type="button">▶ 自動導覽</button></div>
-        </div>
-        <div class="sx-info" id="sxInfo"><div class="sx-thumb"></div><div class="sx-meta"></div></div>
-        <span id="sxCount" hidden></span>
-      </div>
-      <ol class="sx-list" id="sxList" aria-label="零件清單"></ol>
+      <div class="sx-cap" id="sxCap"><div class="no"></div><h2></h2><p></p></div>
+      <ol class="sx-rail" id="sxRail" aria-label="零件導覽"></ol>
+      <div class="sx-hint" id="sxHint" aria-hidden="true">SCROLL<i></i></div>
     </div>
   </section>
 
-  <section class="sx-parts" aria-label="零件總覽">
-    <h2 class="reveal">零件總覽</h2>
-    <div id="sxGroups"></div>
+  <section class="sx-stmt" id="sxStmt"><small>雙螺旋倒流設計</small><p>以鏟雪車的進雪結構為靈感設計的雙螺旋倒流設計，可以提升沙粒收集效率，將沙子與廢棄物穩定導入篩選模組，有效分離沙粒與微型垃圾。</p></section>
+
+  <section class="sx-feats" id="sxFeats">
+    <div class="sx-fg">
+      <article class="sx-f wide" data-r="[360,420,430,390]"><small>進沙機構</small><h3>雙螺旋進沙結構</h3><p>配合<b>裝置進沙口</b>，把沙子與廢棄物導入篩選模組。</p><div class="ph"></div></article>
+      <article class="sx-f" data-r="[960,480,410,380]"><small>行走機構</small><h3>履帶式驅動</h3><p><b>前輪 ×2</b>、<b>後驅動輪 ×2</b>、<b>履帶輪板架 ×2</b>、<b>履帶輪支撐柱 ×2</b>。</p><div class="ph"></div></article>
+      <article class="sx-f" data-r="[590,200,330,240]"><small>控制與供電</small><h3>樹莓派與供電</h3><p><b>樹莓派 4B 2G Ram</b>、樹莓派18650供電模組、18650 5V / 12V供電模組。</p><div class="ph"></div></article>
+    </div>
   </section>
 
-  <section class="sx-spec">
-    <div class="in">
-      <h2 class="reveal">技術規格</h2>
-      <h3 class="reveal">機體規格</h3>
-      <dl>
-        <div class="spec reveal" style="--r:0"><dt>機體尺寸:</dt><dd>—</dd></div>
-        <div class="spec reveal" style="--r:1"><dt>機體淨重:</dt><dd>—</dd></div>
-        <div class="spec reveal" style="--r:2"><dt>離地高度:</dt><dd>—</dd></div>
-        <div class="spec reveal" style="--r:3"><dt>最大有效負載/承重</dt><dd>—</dd></div>
-        <div class="spec reveal" style="--r:4"><dt>驅動系統</dt><dd class="v">履帶式驅動</dd></div>
-        <div class="spec reveal" style="--r:5"><dt>速度</dt><dd>—</dd></div>
-        <div class="spec reveal" style="--r:6"><dt>續航時間</dt><dd>—</dd></div>
-        <div class="spec reveal" style="--r:7"><dt>廢棄物攔截粒徑</dt><dd>—</dd></div>
-      </dl>
-    </div>
+  <section class="sx-parts" id="sxPartsSec" aria-label="零件">
+    <h2 class="reveal"><small>PARTS</small>13 項零件，一次看清楚。</h2>
+    <div class="sx-cards" id="sxCards"></div>
+  </section>
+
+  <section class="sx-spec" id="sxSpecSec">
+    <h2 class="reveal"><small>SPECS</small>技術規格</h2>
+    <dl>
+        <div class="sp reveal"><dt>機體尺寸:</dt><dd class="empty">—</dd></div>
+        <div class="sp reveal"><dt>機體淨重:</dt><dd class="empty">—</dd></div>
+        <div class="sp reveal"><dt>離地高度:</dt><dd class="empty">—</dd></div>
+        <div class="sp reveal"><dt>最大有效負載/承重</dt><dd class="empty">—</dd></div>
+        <div class="sp reveal"><dt>驅動系統</dt><dd>履帶式驅動</dd></div>
+        <div class="sp reveal"><dt>速度</dt><dd class="empty">—</dd></div>
+        <div class="sp reveal"><dt>續航時間</dt><dd class="empty">—</dd></div>
+        <div class="sp reveal"><dt>廢棄物攔截粒徑</dt><dd class="empty">—</dd></div>
+        </dl>
+  </section>
+
+  <section class="sx-end">
+    <h2 class="reveal">讓沙灘變得更乾淨</h2>
+    <div class="row reveal"><a class="p" href="about.html">加入行動 →</a><a class="s" href="contact.html">聯絡我們</a></div>
   </section>
 </div>
 </main>
